@@ -8,6 +8,9 @@ public class InfoFornecedorDTO {
         this.enderecoFornecedor = enderecoFornecedor;
     }
 
+    public InfoFornecedorDTO() {
+    }
+
     public EnderecoDTO getEnderecoFornecedor() {
         return enderecoFornecedor;
     }

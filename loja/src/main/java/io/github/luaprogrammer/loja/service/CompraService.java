@@ -13,8 +13,7 @@ import java.util.logging.Logger;
 @Service
 public class CompraService {
 
-    public static final String uri = "http://localhost:8081/info/";
-    private Logger logger;
+    public static String uri = "http://localhost:8081/info/";
 
     public void realizaCompra(CompraDTO compra) {
         RestTemplate client = new RestTemplate();
@@ -23,7 +22,6 @@ public class CompraService {
                 HttpEntity.EMPTY,
                 InfoFornecedorDTO.class);
 
-        logger.info("Trazendo informações do fornecedor");
         System.out.println(exchange.getBody().getEnderecoFornecedor());
     }
 }

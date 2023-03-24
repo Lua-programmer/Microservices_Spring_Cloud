@@ -11,6 +11,9 @@ public class ItemDTO {
         this.quantidade = quantidade;
     }
 
+    public ItemDTO() {
+    }
+
     public Long getId() {
         return id;
     }

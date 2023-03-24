@@ -12,6 +12,9 @@ public class CompraDTO {
         this.endereco = endereco;
     }
 
+    public CompraDTO() {
+    }
+
     public List<ItemDTO> getItens() {
         return itens;
     }

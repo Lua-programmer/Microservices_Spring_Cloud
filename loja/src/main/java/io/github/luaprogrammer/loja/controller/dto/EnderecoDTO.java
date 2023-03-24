@@ -14,6 +14,9 @@ public class EnderecoDTO {
         this.estado = estado;
     }
 
+    public EnderecoDTO() {
+    }
+
     public String getRua() {
         return rua;
     }

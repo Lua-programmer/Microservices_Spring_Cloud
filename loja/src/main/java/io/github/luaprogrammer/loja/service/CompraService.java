@@ -13,11 +13,12 @@ import java.util.logging.Logger;
 @Service
 public class CompraService {
 
+    public static final String uri = "http://localhost:8081/info/";
     private Logger logger;
 
     public void realizaCompra(CompraDTO compra) {
         RestTemplate client = new RestTemplate();
-        ResponseEntity<InfoFornecedorDTO> exchange = client.exchange("http://8081/info/" + compra.getEndereco().getEstado(),
+        ResponseEntity<InfoFornecedorDTO> exchange = client.exchange(uri + compra.getEndereco().getEstado(),
                 HttpMethod.GET,
                 HttpEntity.EMPTY,
                 InfoFornecedorDTO.class);

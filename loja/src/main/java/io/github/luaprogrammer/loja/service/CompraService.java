@@ -8,8 +8,12 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+import java.util.logging.Logger;
+
 @Service
 public class CompraService {
+
+    private Logger logger;
 
     public void realizaCompra(CompraDTO compra) {
         RestTemplate client = new RestTemplate();
@@ -18,6 +22,7 @@ public class CompraService {
                 HttpEntity.EMPTY,
                 InfoFornecedorDTO.class);
 
+        logger.info("Trazendo informações do fornecedor");
         System.out.println(exchange.getBody().getEnderecoFornecedor());
     }
 }

@@ -22,6 +22,6 @@ public class CompraService {
                 HttpEntity.EMPTY,
                 InfoFornecedorDTO.class);
 
-        System.out.println(exchange.getBody().getEnderecoFornecedor());
+        System.out.println(exchange.getBody().getEndereco());
     }
 }

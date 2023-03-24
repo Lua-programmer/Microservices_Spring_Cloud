@@ -2,20 +2,13 @@ package io.github.luaprogrammer.loja.controller.dto;
 
 public class InfoFornecedorDTO {
 
-    private EnderecoDTO enderecoFornecedor;
+    private String endereco;
 
-    public InfoFornecedorDTO(EnderecoDTO enderecoFornecedor) {
-        this.enderecoFornecedor = enderecoFornecedor;
+    public String getEndereco() {
+        return endereco;
     }
 
-    public InfoFornecedorDTO() {
-    }
-
-    public EnderecoDTO getEnderecoFornecedor() {
-        return enderecoFornecedor;
-    }
-
-    public void setEnderecoFornecedor(EnderecoDTO enderecoFornecedor) {
-        this.enderecoFornecedor = enderecoFornecedor;
+    public void setEndereco(String enderecoFornecedor) {
+        this.endereco = enderecoFornecedor;
     }
 }

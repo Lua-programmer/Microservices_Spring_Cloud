@@ -8,14 +8,6 @@ public class EnderecoDTO {
 
     private String estado;
 
-    public EnderecoDTO(String rua, Integer numero, String estado) {
-        this.rua = rua;
-        this.numero = numero;
-        this.estado = estado;
-    }
-
-    public EnderecoDTO() {
-    }
 
     public String getRua() {
         return rua;

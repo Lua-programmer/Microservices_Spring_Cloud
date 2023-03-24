@@ -7,14 +7,6 @@ public class CompraDTO {
 
     private EnderecoDTO endereco;
 
-    public CompraDTO(List<ItemDTO> itens, EnderecoDTO endereco) {
-        this.itens = itens;
-        this.endereco = endereco;
-    }
-
-    public CompraDTO() {
-    }
-
     public List<ItemDTO> getItens() {
         return itens;
     }

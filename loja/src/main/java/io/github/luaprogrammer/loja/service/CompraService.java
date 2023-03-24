@@ -8,15 +8,19 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
-import java.util.logging.Logger;
-
 @Service
 public class CompraService {
 
-    public static String uri = "http://localhost:8081/info/";
+    private RestTemplate client;
+
+    public static String uri = "http://fornecedor/info/";
+
+    public CompraService(RestTemplate client) {
+        this.client = client;
+    }
 
     public void realizaCompra(CompraDTO compra) {
-        RestTemplate client = new RestTemplate();
+
         ResponseEntity<InfoFornecedorDTO> exchange = client.exchange(uri + compra.getEndereco().getEstado(),
                 HttpMethod.GET,
                 HttpEntity.EMPTY,

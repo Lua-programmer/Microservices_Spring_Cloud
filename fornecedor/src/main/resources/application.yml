@@ -10,4 +10,5 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: http://localhost:8761/eureka  #coloca na loja o end da aplicação eureka
+      defaultZone: http://localhost:8761/eureka
+      #coloca na loja o end da aplicaï¿½ï¿½o eureka
